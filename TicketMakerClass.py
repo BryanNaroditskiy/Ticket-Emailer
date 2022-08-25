@@ -11,7 +11,7 @@ class TicketMaker():
     
     def MakeTicket(ticketNum, digits, kindOfTicket):
     
-        #Opens the base badge and stores it in a object
+        #Opens the base ticket image and stores it in a object
         if(kindOfTicket=='PSU'):
             img = Image.open(r'Base Tickets\Student Ticket.png') 
         elif(kindOfTicket=='Non_PSU'):
