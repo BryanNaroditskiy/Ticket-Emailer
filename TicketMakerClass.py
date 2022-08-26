@@ -9,7 +9,7 @@ from PIL import ImageFont
 
 class TicketMaker():
     
-    def MakeTicket(ticketNum, digits, kindOfTicket):
+    def MakeTicket(ticketNum, digits, kindOfTicket): 
     
         #Opens the base ticket image and stores it in a object
         if(kindOfTicket=='PSU'):

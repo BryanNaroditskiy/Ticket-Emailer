@@ -35,23 +35,23 @@ def makeTheTicket(kindOfTicket):                                                
     number = int(numberFromFile)                                                 
     number+=1                                                                        # Since file starts from 0 tickets sold in order to get proper number on ticket need to +1 to the value from the text file
     ticketNumber = str(number)
-    f.close()                                                                        #Closing file
+    f.close()                                                                        # Closing file
 
     digits = 0
 
-    while number != 0:                                                               #Determines the amount of digits in the ticket number 
+    while number != 0:                                                               # Determines the amount of digits in the ticket number 
         number //= 10
         digits += 1
 
-    ticket = tm.TicketMaker.MakeTicket(ticketNumber,digits,kindOfTicket)             #Calling on method from TicketMakerClass to make the ticket image and returns the image
+    ticket = tm.TicketMaker.MakeTicket(ticketNumber,digits,kindOfTicket)             # Calling on method from TicketMakerClass to make the ticket image and returns the image
 
     f = open('NumberOf_TicketsSolds.txt','w')                                        # Opens text file that is keeping track of number of tickets sold and clears the document so new value can be now written
     fNumber = int(numberFromFile, base=0)                                        
     fNumber+=1
-    f.write(str(fNumber))                                                            #Adds to number of tickets sold document
+    f.write(str(fNumber))                                                            # Adds to number of tickets sold document
     f.close()
 
-    return ticket
+    return ticket                                                                    # Returns image path of the ticket image
     
 
 
